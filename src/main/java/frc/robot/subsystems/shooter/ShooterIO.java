@@ -5,7 +5,7 @@ public interface ShooterIO {
 	public enum Shooter_State
 	{
 		IDLE,
-		RUNNING
+		REV
 	}
 
 	class ShooterIOInputs {

@@ -14,6 +14,22 @@ package frc.robot;
  */
 public final class Constants {
 
+	public static final class Drivers
+	{
+		public static enum Modes
+		{
+			ONE_BUTTON_SHOOT,
+			TWO_BUTTON_SHOOT
+		};
+
+		public static final Modes Shoot_Mode = Modes.TWO_BUTTON_SHOOT;
+	}
+
+	public static final class MotorIDs
+	{
+		public static final int FlyWheelID = 31;
+	}
+
 	public static final class Swerve {
 		public static final double DRIVETRAIN_MAX_SPEED = 1;
 		public static final double DRIVETRAIN_SLOW_SPEED = 0.5;

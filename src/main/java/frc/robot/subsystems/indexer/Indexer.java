@@ -2,17 +2,17 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package frc.robot.subsystems.intake;
+package frc.robot.subsystems.indexer;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import frc.robot.subsystems.intake.IntakeIO.Intake_State;
+import frc.robot.subsystems.indexer.IndexerIO.Indexer_State;
 
-public class Intake extends SubsystemBase {
+public class Indexer extends SubsystemBase {
 
-	private Intake_State m_state;
+	private Indexer_State m_state;
 
-	public Intake() {
-		this.m_state = Intake_State.IDLE;
+	public Indexer() {
+		this.m_state = Indexer_State.IDLE;
 	}
 
 
@@ -23,24 +23,28 @@ public class Intake extends SubsystemBase {
 				break;
 			}
 
-			case INTAKING: {
+			case INATKING: {
+
 				break;
 			}
 
-			case OUTTAKING: {
+			case INDEXING: {
+
 				break;
 			}
 		}
 	}
 
 
-	public Intake_State getState()
+	public Indexer_State getState()
 	{
 		return this.m_state;
 	}
 
-	public void setState(Intake_State state)
+	public void setState(Indexer_State state)
 	{
+		if (this.m_state == Indexer_State.INDEXING) return;
+		
 		this.m_state = state;
 	}
 }
